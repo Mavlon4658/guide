@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <title>Путеводная</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- modal -->
+        <section class="modal">
+            <div class="modal_head">
+                <div class="main_container">
+                    <a href="/" class="modal_head__logo">
+                        <img src="./images/logo.svg" alt="">
+                    </a>
+                    <a href="#" class="modal_head__btn">
+                        <span>Закрыть</span>
+                        <img src="./images/times.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="main_container">
+                <div class="modal_title">
+                    <div>
+                        <h2>Заявка на подбор тура</h2>
+                        <p>Выберите подходящие параметры, а мы подберем лучшие предложения специально для вас.</p>
+                    </div>
+                    <div class="swp_navigation">01/02</div>
+                </div>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="modal_form">
+                                <select name="" id="">
+                                    <option value="" selected hidden>Количество человек</option>
+                                    <option value="">item 1</option>
+                                    <option value="">item 2</option>
+                                    <option value="">item 3</option>
+                                    <option value="">item 4</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected hidden>Бюджет</option>
+                                    <option value="">item 1</option>
+                                    <option value="">item 2</option>
+                                    <option value="">item 3</option>
+                                    <option value="">item 4</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected hidden>Все страны</option>
+                                    <option value="">item 1</option>
+                                    <option value="">item 2</option>
+                                    <option value="">item 3</option>
+                                    <option value="">item 4</option>
+                                </select>
+                            </div>
+                            <ul class="modal_card">
+                                <li class="modal_card__item">
+                                    <img src="./images/card-1.png" alt="" class="main_img">
+                                    <label for="checkbox1">
+                                        <input type="checkbox" id="checkbox1">
+                                        <span class="icon">&#10003;</span>
+                                        <span class="text">Туры по России</span>
+                                    </label>
+                                </li>
+                                <li class="modal_card__item">
+                                    <img src="./images/card-2.png" alt="" class="main_img">
+                                    <label for="checkbox2">
+                                        <input type="checkbox" id="checkbox2">
+                                        <span class="icon">&#10003;</span>
+                                        <span class="text">Экскурсионные туры</span>
+                                    </label>
+                                </li>
+                                <li class="modal_card__item">
+                                    <img src="./images/card-3.png" alt="" class="main_img">
+                                    <label for="checkbox3">
+                                        <input type="checkbox" id="checkbox3">
+                                        <span class="icon">&#10003;</span>
+                                        <span class="text">Семейный отдых</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="modal_foot">
+                                <button class="btn_left"></button>
+                                <button class="btn_right">
+                                    <span>Следующий шаг</span>
+                                    <img src="./images/light-arrow-right.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="modal_form">
+                                <input type="text" placeholder="Как вас зовут">
+                                <input type="email" placeholder="Ваш e-mail">
+                                <input type="tel" placeholder="Номер телефона">
+                            </div>
+                            <textarea name="" placeholder="Комментарий" id=""></textarea>
+                            <div class="modal_foot">
+                                <button class="btn_left">
+                                    <img src="./images/arrow-left.svg" alt="">
+                                    <span>Вернуться назад</span>
+                                </button>
+                                <button class="btn_right">
+                                    <span>Отправить заявку</span>
+                                    <img src="./images/light-arrow-right.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- modal end -->
+
+    </div>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS link -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

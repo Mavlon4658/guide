@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
+@font-face {
+    font-family: Roslindale Cyrillic Display Condensed;
+    src: url('../fonts/RoslindaleCyrillicDisplayCondensed-Regular.ttf');
+    font-weight: 400;
+}
+
 $font-onest: "Onest", sans-serif;
 $font-roslindale-cyrillic-display-condensed: 'Roslindale Cyrillic Display Condensed', sans-serif;
 
@@ -133,6 +139,7 @@ body {
             font-family: $font-roslindale-cyrillic-display-condensed;
             font-size: 72px;
             line-height: 110%;
+            font-weight: 400;
             color: #40311E;
             margin-bottom: 36px;
         }
@@ -147,6 +154,8 @@ body {
             line-height: 110%;
             color: rgba(15, 15, 15, 0.2);
             width: auto;
+            font-family: $font-roslindale-cyrillic-display-condensed;
+            font-weight: 400;
         }
     }
 

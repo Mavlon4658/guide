@@ -23,3 +23,25 @@ nextBtn[0].onclick = () => {
 prevBtn[1].onclick = () => {
     swp.slideTo(0);
 }
+
+let modal = document.querySelector('.modal'),
+    modalOpen = document.querySelectorAll('.modal__open'),
+    modalClose = document.querySelector('.modal_head__btn');
+
+if (modal) {
+    modalOpen.forEach(el => {
+        el.onclick = e => {
+            e.preventDefault();
+            modal.classList.add('active');
+        }
+    })
+
+    modalClose.onclick = e => {
+        e.preventDefault();
+        modal.classList.remove('active');
+        modal.classList.add('end-active');
+        setTimeout(() => {
+            modal.classList.remove('end-active');
+        }, 300);
+    }
+}

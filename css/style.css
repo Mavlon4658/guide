@@ -286,7 +286,7 @@ body {
 }
 @keyframes modalActive {
   from {
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
   to {
     transform: translateY(0);
@@ -301,13 +301,13 @@ body {
     transform: translateY(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
 }
 .modal.end-active {
   display: block;
   animation: modalEndActive 0.3s linear 1;
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 
 @media (max-width: 1300px) {

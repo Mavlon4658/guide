@@ -106,7 +106,7 @@ body {
     }
 }
 
-.modal {
+.main-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -355,7 +355,7 @@ body {
         font-size: 14px;
     }
 
-    .modal {
+    .main-modal {
         &_head {
             padding: 16px 0;
             margin-bottom: 48px;
@@ -454,7 +454,7 @@ body {
 }
 
 @media (max-width: 992px) {
-    .modal {
+    .main-modal {
         &_head {
             margin-bottom: 100px;
         }
@@ -546,7 +546,7 @@ body {
 }
 
 @media (max-width: 576px) {
-    .modal {
+    .main-modal {
         &_head {
             padding: 15px 0;
             margin-bottom: 56px;

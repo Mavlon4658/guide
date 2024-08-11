@@ -1,4 +1,4 @@
-let swp = new Swiper('.modal .swiper', {
+let swp = new Swiper('.main-modal .swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
     // initialSlide: 1,
@@ -24,9 +24,9 @@ prevBtn[1].onclick = () => {
     swp.slideTo(0);
 }
 
-let modal = document.querySelector('.modal'),
-    modalOpen = document.querySelectorAll('.modal__open'),
-    modalClose = document.querySelector('.modal_head__btn');
+let modal = document.querySelector('.main-modal'),
+    modalOpen = document.querySelectorAll('.main-modal__open'),
+    modalClose = document.querySelector('.main-modal_head__btn');
 
 if (modal) {
     modalOpen.forEach(el => {

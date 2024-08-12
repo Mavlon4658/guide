@@ -105,10 +105,10 @@ body {
 .main_swp .swp_btns {
   width: 1106px;
   position: absolute;
+  z-index: 3;
   left: 50%;
-  top: 451px;
-  transform: translateX(-50%);
-  z-index: 2;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +118,7 @@ body {
 }
 
 .swp-1 .swiper-slide {
-  height: 920px;
+  height: 100vh;
 }
 .swp-1 .swiper-slide img {
   width: 100%;
@@ -129,10 +129,13 @@ body {
 .swp-2 {
   width: 1050px;
   overflow: visible;
+  z-index: 2;
+  height: 100%;
 }
 .swp-2__wrapper {
+  height: 100vh;
   position: absolute;
-  top: 310px;
+  top: 0;
   left: 0;
   width: 100%;
 }
@@ -167,6 +170,11 @@ body {
   padding: 14.5px 30.5px;
   color: rgba(15, 15, 15, 0.6);
 }
+.swp-2 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .swp-3 {
   position: absolute;
   bottom: 0;
@@ -193,12 +201,8 @@ body {
     top: 27px;
     gap: 21px;
   }
-  .main_swp .swp_navigation p {
-    color: #fff;
-  }
   .main_swp .swp_btns {
     width: 692px;
-    top: 271px;
   }
   .main_swp .swp_btns button {
     border-radius: 50%;
@@ -206,14 +210,8 @@ body {
   .main_swp .swp_btns button svg {
     width: 32px;
   }
-  .swp-1 .swiper-slide {
-    height: 600px;
-  }
   .swp-2 {
     width: 660px;
-  }
-  .swp-2__wrapper {
-    top: 180px;
   }
   .swp-2 p {
     max-width: 297px;
@@ -236,13 +234,9 @@ body {
 @media (max-width: 800px) {
   .main_swp .swp_btns {
     width: calc(100% - 60px);
-    top: 274px;
   }
   .swp-2 {
     width: 100%;
-  }
-  .swp-2__wrapper {
-    top: 191px;
   }
   .swp-2 h3 {
     font-size: 52px;
@@ -270,8 +264,11 @@ body {
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
   }
+  .swp-2 {
+    height: 100%;
+  }
   .swp-2__wrapper {
-    top: 168px;
+    height: 100%;
   }
   .swp-2 .hand_wrap {
     display: flex;

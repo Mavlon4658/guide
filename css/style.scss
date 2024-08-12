@@ -113,10 +113,10 @@ body {
     .swp_btns {
         width: 1106px;
         position: absolute;
+        z-index: 3;
         left: 50%;
-        top: 451px;
-        transform: translateX(-50%);
-        z-index: 2;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -131,7 +131,7 @@ body {
     &-1 {
         .swiper {
             &-slide {
-                height: 920px;
+                height: 100vh;
 
                 img {
                     width: 100%;
@@ -145,10 +145,13 @@ body {
     &-2 {
         width: 1050px;
         overflow: visible;
-
+        z-index: 2;
+        height: 100%;
+        
         &__wrapper {
+            height: 100vh;
             position: absolute;
-            top: 310px;
+            top: 0;
             left: 0;
             width: 100%;
         }
@@ -188,6 +191,12 @@ body {
                 color: rgba(15, 15, 15, 0.6);
             }
         }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &-3 {
@@ -219,15 +228,10 @@ body {
         .swp_navigation {
             top: 27px;
             gap: 21px;
-    
-            p {
-                color: #fff;
-            }
         }
     
         .swp_btns {
             width: 692px;
-            top: 271px;
     
             button {
                 border-radius: 50%;
@@ -243,17 +247,12 @@ body {
         &-1 {
             .swiper {
                 &-slide {
-                    height: 600px;
                 }
             }
         }
     
         &-2 {
             width: 660px;
-    
-            &__wrapper {
-                top: 180px;
-            }
     
             p {
                 max-width: 297px;
@@ -286,18 +285,12 @@ body {
     .main_swp {
         .swp_btns {
             width: calc(100% - 60px);
-            top: 274px;
         }
     }
     
     .swp {
         &-2 {
             width: 100%;
-    
-            &__wrapper {
-                top: 191px;
-            }
-    
             h3 {
                 font-size: 52px;
                 margin-bottom: 32px;
@@ -337,8 +330,10 @@ body {
         }
     
         &-2 {
+            height: 100%;
+
             &__wrapper {
-                top: 168px;
+                height: 100%;
             }
 
             .hand_wrap {

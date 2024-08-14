@@ -132,6 +132,7 @@ body {
         .swiper {
             &-slide {
                 height: 100vh;
+                min-height: 800px;
 
                 img {
                     width: 100%;
@@ -150,6 +151,7 @@ body {
         
         &__wrapper {
             height: 100vh;
+            min-height: 800px;
             position: absolute;
             top: 0;
             left: 0;
@@ -289,11 +291,21 @@ body {
     }
     
     .swp {
+        &-1 {
+            .swiper-slide {
+                min-height: 550px;
+            }
+        }
         &-2 {
             width: 100%;
+
             h3 {
                 font-size: 52px;
                 margin-bottom: 32px;
+            }
+
+            &__wrapper {
+                min-height: 550px;
             }
         }
     

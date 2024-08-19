@@ -12,6 +12,13 @@ if (tripSelect1Btn) {
     tripSelect1List.forEach(el => {
         el.onclick = () => {
             document.querySelector('.tirp_form__select_1 .select_head input').value = el.textContent;
+            tripSelect1List.forEach(data => {
+                if (data == el) {
+                    data.classList.add('active');
+                } else {
+                    data.classList.remove('active');
+                }
+            })
         }
     })
 }

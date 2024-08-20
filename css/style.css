@@ -11,60 +11,10 @@
   -webkit-tap-highlight-color: transparent !important;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-}
-
-img {
-  max-width: 100%;
-}
-
-span, label {
-  display: inline-block;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-input, textarea {
-  outline: none;
-  border: 0;
-  background: transparent;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  outline: 0;
-  font-family: "Onest", sans-serif;
-  font-size: 18px;
-  line-height: 130%;
-  letter-spacing: -2%;
-}
-
-address {
-  font-style: normal;
-}
-
 .wrapper {
   width: 100%;
   overflow: hidden;
   min-height: 100svh;
-}
-
-ul, ol, dl {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -97,6 +47,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 52px;
+  outline: none;
+  border: none;
   background: #007B96;
   color: #fff;
   border-radius: 50px;
@@ -176,6 +128,9 @@ body {
   width: 100%;
   height: 47px;
   font-size: 18px;
+  outline: none;
+  border: 0;
+  background: transparent;
 }
 @media screen and (max-width: 1300px) {
   .tirp_form__select_1 .select_head input {
@@ -198,6 +153,9 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding-right: 25px;
+  outline: none;
+  background: transparent;
+  border: none;
 }
 @media screen and (max-width: 1300px) {
   .tirp_form__select_1 .select_head button {
@@ -307,6 +265,9 @@ body {
   height: 47px;
   font-size: 18px;
   color: #0F0F0F;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 @media screen and (max-width: 1300px) {
   .tirp_form__select_2 .select_head input {
@@ -329,6 +290,9 @@ body {
   align-items: center;
   justify-content: flex-end;
   padding-right: 25.6px;
+  border: none;
+  outline: none;
+  background: transparent;
 }
 @media screen and (max-width: 1300px) {
   .tirp_form__select_2 .select_head button {
@@ -391,6 +355,7 @@ body {
 .tirp_form__select_2 .select_body .btns a {
   width: calc(50% - 9px);
   height: 46px;
+  text-decoration: none;
 }
 @media screen and (max-width: 1300px) {
   .tirp_form__select_2 .select_body .btns a {
@@ -433,6 +398,9 @@ body {
   width: 100%;
   outline: none;
   font-size: 18px;
+  border: none;
+  outline: none;
+  background: transparent;
   border-bottom: 1px solid rgba(153, 153, 153, 0.2);
   padding-bottom: 8px;
   -moz-appearance: textfield;
@@ -527,6 +495,9 @@ body {
   position: absolute;
   top: 43px;
   right: 43px;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 @media screen and (max-width: 1300px) {
   .request_modal__close {
@@ -623,6 +594,9 @@ body {
   color: #0F0F0F;
   font-size: 18px;
   line-height: 130%;
+  border: none;
+  outline: none;
+  background: transparent;
   border-bottom: 1px solid rgba(15, 15, 15, 0.2);
 }
 @media screen and (max-width: 1300px) {

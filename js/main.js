@@ -39,26 +39,13 @@ const rangeInput = document.querySelectorAll(".range-input input"),
     range = document.querySelector(".slider .progress");
 let priceGap = 1000;
 
-priceInput.forEach((input) => {
-    let minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
-
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-        if (input.className === "input-min") {
-            rangeInput[0].value = minPrice;
-            range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-        } else {
-            rangeInput[1].value = maxPrice;
-            range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-        }
-    }
-
-    input.addEventListener("input", (e) => {
+if (rangeInput.length) {
+    priceInput.forEach((input) => {
         let minPrice = parseInt(priceInput[0].value),
             maxPrice = parseInt(priceInput[1].value);
-
+    
         if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-            if (e.target.className === "input-min") {
+            if (input.className === "input-min") {
                 rangeInput[0].value = minPrice;
                 range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
             } else {
@@ -66,31 +53,68 @@ priceInput.forEach((input) => {
                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
             }
         }
-    });
-});
-
-rangeInput.forEach((input) => {
-    input.addEventListener("input", (e) => {
-        let minVal = parseInt(rangeInput[0].value),
-            maxVal = parseInt(rangeInput[1].value);
-
-        if (maxVal - minVal < priceGap) {
-            if (e.target.className === "range-min") {
-                rangeInput[0].value = maxVal - priceGap;
-            } else {
-                rangeInput[1].value = minVal + priceGap;
+    
+        input.addEventListener("input", (e) => {
+            let minPrice = parseInt(priceInput[0].value),
+                maxPrice = parseInt(priceInput[1].value);
+    
+            if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                if (e.target.className === "input-min") {
+                    rangeInput[0].value = minPrice;
+                    range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                } else {
+                    rangeInput[1].value = maxPrice;
+                    range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                }
             }
-        } else {
-            priceInput[0].value = minVal;
-            priceInput[1].value = maxVal;
-            range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-        }
+        });
     });
-});
-
-document.querySelector('.tirp_form .btns .btn_primary').onclick = () => {
-    document.querySelector('.tirp_form__select_2 .select_head input').value = 'От ' + priceInput[0].value + '-' + priceInput[1].value + ' руб.'
+    
+    rangeInput.forEach((input) => {
+        input.addEventListener("input", (e) => {
+            let minVal = parseInt(rangeInput[0].value),
+                maxVal = parseInt(rangeInput[1].value);
+    
+            if (maxVal - minVal < priceGap) {
+                if (e.target.className === "range-min") {
+                    rangeInput[0].value = maxVal - priceGap;
+                } else {
+                    rangeInput[1].value = minVal + priceGap;
+                }
+            } else {
+                priceInput[0].value = minVal;
+                priceInput[1].value = maxVal;
+                range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+        });
+    });
+    
+    document.querySelector('.tirp_form .btns .btn_primary').onclick = () => {
+        document.querySelector('.tirp_form__select_2 .select_head input').value = 'От ' + priceInput[0].value + '-' + priceInput[1].value + ' руб.'
+    }
+    
+    document.querySelector('.tirp_form .btns .btn_light').onclick = () => {
+        document.querySelector('.tirp_form__select_2 .select_head input').value = '';
+        priceInput[0].value = rangeInput[0].getAttribute('min');
+        priceInput[1].value = rangeInput[1].getAttribute('max');
+        rangeInput[0].value = rangeInput[0].getAttribute('min');
+        rangeInput[1].value = rangeInput[1].getAttribute('max');
+        priceInput.forEach(input => {
+            let minPrice = parseInt(priceInput[0].value),
+            maxPrice = parseInt(priceInput[1].value);
+    
+            if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                if (input.className === "input-min") {
+                    rangeInput[0].value = minPrice;
+                    range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                } else {
+                    rangeInput[1].value = maxPrice;
+                    range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                }
+            }
+        })
+    } 
 }
 
 document.addEventListener('click', event => {
